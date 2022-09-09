@@ -1,0 +1,175 @@
+public class StringOperations { 
+
+  
+
+  
+
+static void compareStr(String a,String b) { 
+
+if (a.equals(b)) { 
+
+System.out.println("strings are equal"); 
+
+} 
+
+else { 
+
+System.out.println("strings are not equal"); 
+
+} 
+
+} 
+
+static void switchCase(String a) { 
+
+char c; 
+
+    for (int i = 0; i < a.length(); i++) 
+
+    { 
+
+    c = a.charAt(i); 
+
+        if (Character.isUpperCase(c)) 
+
+        { 
+
+        System.out.print(Character.toLowerCase(c)); 
+
+         
+
+        } 
+
+        else if (Character.isLowerCase(c)) 
+
+        { 
+
+        System.out.print(Character.toUpperCase(c)); 
+
+         
+
+        } 
+
+    } 
+
+    System.out.println(""); 
+
+} 
+
+static void isSubstring(int replace,String a,String b) { 
+
+if (replace == 1) { 
+
+if (a.contains(b)) { 
+
+String s = a.replace(b,"Hello"); 
+
+System.out.println(s); 
+
+}else { 
+
+System.out.println("the second string is not a substring of the first string"); 
+
+} 
+
+}else { 
+
+if (a.contains(b)) { 
+
+System.out.println("the second string is a substring of the first string"); 
+
+}else { 
+
+System.out.println("the second string is not a substring of the first string"); 
+
+} 
+
+} 
+
+} 
+
+public static void main(String[] args) { 
+
+Scanner sc = new Scanner(System.in); 
+
+int option=1; 
+
+String a; 
+
+String b; 
+
+System.out.println("Please enter the First String"); 
+
+a =sc.nextLine(); 
+
+System.out.println("Please enter the Second String"); 
+
+b =sc.nextLine(); 
+
+                                                                                                                                                     
+
+do { 
+
+System.out.println("1)COMPARE"); 
+
+System.out.println("2)CASE SWITCH"); 
+
+System.out.println("3)SUBSTRING CHECK"); 
+
+System.out.println("4)SUBSTRING CHECK AND REPLACE"); 
+
+System.out.println(""); 
+
+try { 
+
+option = sc.nextInt(); 
+
+if(option>4) { 
+
+throw new IllegalArgumentException(); 
+
+} 
+
+switch (option) { 
+
+case 1: 
+
+compareStr(a,b); 
+
+break; 
+
+case 2: 
+
+switchCase(a); 
+
+switchCase(b); 
+
+break; 
+
+case 3: 
+
+isSubstring(0,a,b); 
+
+break; 
+
+case 4: 
+
+isSubstring(1,a,b); 
+
+break; 
+
+case 5: 
+
+System.exit(0); 
+
+break; 
+
+} }catch(IllegalArgumentException e) { 
+
+System.out.println("Please enter a valid input"); 
+
+} 
+
+}while(option!=5);} 
+
+} 
