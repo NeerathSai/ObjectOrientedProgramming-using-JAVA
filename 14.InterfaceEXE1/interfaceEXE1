@@ -1,0 +1,201 @@
+import java.util.Scanner; 
+
+  
+
+interface Sports{ 
+
+void getNumberofGoals(); 
+
+void dispTeam(); 
+
+final int nop=11;//number of players 
+
+  
+
+} 
+
+  
+
+class Hockey implements Sports{ 
+
+int h_goals,a_goals; 
+
+String home_team,away_team; 
+
+  
+
+Hockey(){ 
+
+Scanner sc=new Scanner(System.in); 
+
+try{ 
+
+System.out.println("Please enter the number of goals scored by home team: "); 
+
+this.h_goals=sc.nextInt(); 
+
+System.out.println("Please enter the number of goals scored by away team: "); 
+
+this.a_goals=sc.nextInt(); 
+
+} 
+
+catch(Exception e) { 
+
+System.out.println("Please enter a valid input"); 
+
+} 
+
+  
+
+System.out.println("Enter the name of the home team:"); 
+
+home_team=sc.next(); 
+
+System.out.println("Enter the name of the away team:"); 
+
+away_team=sc.next(); 
+
+  
+
+} 
+
+  
+
+public void getNumberofGoals() { 
+
+System.out.println("The number of goals scored by "+home_team+ " team are "+this.h_goals); 
+
+System.out.println("The number of goals scored by "+away_team+ " team are "+this.a_goals); 
+
+} 
+
+public void dispTeam() { 
+
+System.out.println("Home Team: "+home_team); 
+
+System.out.println("Home Team: "+away_team); 
+
+} 
+
+} 
+
+  
+
+class Football implements Sports{ 
+
+int h_goals,a_goals; 
+
+String home_team,away_team; 
+
+Football(){ 
+
+Scanner sc=new Scanner(System.in); 
+
+try{ 
+
+System.out.println("Please enter the number of goals scored by home team: "); 
+
+this.h_goals=sc.nextInt(); 
+
+System.out.println("Please enter the number of goals scored by away team: "); 
+
+this.a_goals=sc.nextInt(); 
+
+} 
+
+catch(Exception e) { 
+
+System.out.println("Please enter a valid input"); 
+
+} 
+
+  
+
+System.out.println("Enter the name of the "+" home team"); 
+
+home_team=sc.next(); 
+
+System.out.println("Enter the name of the "+" away team"); 
+
+away_team=sc.next(); 
+
+  
+
+} 
+
+  
+
+public void getNumberofGoals() { 
+
+System.out.println("no.of goals by" + home_team + this.h_goals); 
+
+System.out.println("no.of goals by" + away_team + this.a_goals);  
+
+} 
+
+public void dispTeam() { 
+
+System.out.println("Home Team: "+home_team); 
+
+System.out.println("Home Team: "+away_team); 
+
+} 
+
+} 
+
+  
+
+public class Problem_2 { 
+
+public static void main(String[] args) { 
+
+Scanner sc=new Scanner(System.in); 
+
+int option; 
+
+System.out.println("1)Hockey"); 
+
+System.out.println("2)Football"); 
+
+System.out.println("3)Exit"); 
+
+  
+
+option=sc.nextInt(); 
+
+do{switch(option) { 
+
+case 1: 
+
+Hockey H=new Hockey(); 
+
+H.dispTeam(); 
+
+H.getNumberofGoals(); 
+
+  
+
+case 2: 
+
+Football F=new Football(); 
+
+F.dispTeam(); 
+
+F.getNumberofGoals(); 
+
+  
+
+case 3: 
+
+break; 
+
+default: 
+
+System.out.println("Invalid Input"); 
+
+}}while(option!=3); 
+
+} 
+
+} 
