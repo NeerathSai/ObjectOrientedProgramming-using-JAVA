@@ -1,0 +1,67 @@
+import java.awt.*;   
+
+import java.awt.event.*;   
+
+import javax.swing.*; 
+
+public class HelloWorld  
+
+{ 
+
+public HelloWorld()  
+
+{ 
+
+JFrame f=new JFrame("App"); 
+
+Button b=new Button("Hello World"); 
+
+b.addActionListener(new ActionListener() 
+
+{ 
+
+public void actionPerformed(ActionEvent e) 
+
+{ 
+
+JFrame c=new JFrame("New Window"); 
+
+JLabel label=new JLabel(); 
+
+label.setText("Beautiful World"); 
+
+c.add(label); 
+
+    c.setSize(300,400); 
+
+    c.setLocation(300,300); 
+
+    c.setLayout(new FlowLayout());   
+
+    c.setVisible(true); 
+
+}   
+
+        });   
+
+    f.add(b); 
+
+    f.setSize(400,800); 
+
+    f.setLocation(300,300); 
+
+    f.setLayout(new FlowLayout());   
+
+    f.setVisible(true);    
+
+    } 
+
+public static void main(String args[]) 
+
+{ 
+
+new HelloWorld(); 
+
+} 
+
+} 
