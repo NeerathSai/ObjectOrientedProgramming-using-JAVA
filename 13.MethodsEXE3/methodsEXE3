@@ -1,0 +1,121 @@
+import java.util.Scanner; 
+
+  
+
+class Student_Detail 
+
+{ 
+
+static String college="MIT"; 
+
+static int i=1; 
+
+String name; 
+
+int id; 
+
+Student_Detail() 
+
+{ 
+
+name=null; 
+
+id=0; 
+
+} 
+
+Student_Detail(String name, int id) 
+
+{ 
+
+this.name=name; 
+
+this.id=id; 
+
+} 
+
+void getval() 
+
+{ 
+
+Scanner sc=new Scanner(System.in); 
+
+System.out.println("Enter Name of Student: "); 
+
+name=sc.next(); 
+
+System.out.println("Enter Student ID: "); 
+
+try 
+
+{ 
+
+id=sc.nextInt(); 
+
+} 
+
+catch(Exception e) 
+
+{ 
+
+System.out.println("enter valid input"); 
+
+} 
+
+} 
+
+void Display_details() 
+
+{ 
+
+System.out.println("Student no:" +i); 
+
+i++; 
+
+System.out.println("College name: "+college); 
+
+System.out.println("Student name: "+name); 
+
+System.out.println("Student ID: "+id); 
+
+} 
+
+} 
+
+public class MitStudents { 
+
+public static void main(String[] args) 
+
+{ 
+
+Student_Detail s1[]=new Student_Detail[100]; 
+
+Scanner sc=new Scanner(System.in); 
+
+System.out.println("Enter number of students: "); 
+
+int n; 
+
+n=sc.nextInt(); 
+
+for(int i=0;i<n;i++) 
+
+{ 
+
+s1[i]=new Student_Detail(); 
+
+s1[i].getval(); 
+
+} 
+
+for(int i=0;i<n;i++) 
+
+{ 
+
+s1[i].Display_details(); 
+
+} 
+
+} 
+
+} 
