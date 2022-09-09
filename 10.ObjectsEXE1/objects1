@@ -1,0 +1,139 @@
+import java.util.Scanner; 
+
+  
+
+class Area{ 
+
+public float height; 
+
+protected float area; 
+
+} 
+
+  
+
+class triangle extends Area{ 
+
+private float base; 
+
+Scanner sc=new Scanner(System.in); 
+
+triangle(){ 
+
+try { System.out.println("Please enter the height of the triangle:"); 
+
+this.height=sc.nextInt(); 
+
+if(height<=0) { 
+
+throw new IllegalArgumentException(); 
+
+} 
+
+  
+
+//We can see that the height which is a varible of the class Area has been inherited 
+
+System.out.println("Please enter the base of the triangle:"); 
+
+base=sc.nextInt(); 
+
+if(base<=0) { 
+
+throw new IllegalArgumentException(); 
+
+}}catch(IllegalArgumentException e) { 
+
+System.out.println("Please enter a valid input"); 
+
+  
+
+} 
+
+} 
+
+  
+
+void calArea() { 
+
+this.area=(float)height*base/2; 
+
+  
+
+System.out.println("The area of the triangle is " + this.area); 
+
+} 
+
+} 
+
+  
+
+class rectangle extends Area{ 
+
+private float width; 
+
+private float length; 
+
+Scanner sc=new Scanner(System.in); 
+
+rectangle(){ 
+
+try{System.out.println("Please enter the width of the rectangle:"); 
+
+width=sc.nextInt(); 
+
+if(width<=0) { 
+
+throw new IllegalArgumentException(); 
+
+} 
+
+System.out.println("Please enter the length of the rectangle:"); 
+
+length=sc.nextInt(); 
+
+if(length<=0) { 
+
+throw new IllegalArgumentException(); 
+
+} 
+
+}catch(Exception e) { 
+
+System.out.println("Please enter a valid input"); 
+
+} 
+
+} 
+
+void calArea() { 
+
+this.area=width*length; 
+
+System.out.println("The area of the rectangle is " + this.area); 
+
+} 
+
+} 
+
+public class Problem_1 { 
+
+public static void main(String[] args) { 
+
+Scanner sc=new Scanner(System.in); 
+
+  
+
+triangle T=new triangle(); 
+
+T.calArea(); 
+
+rectangle R=new rectangle(); 
+
+R.calArea(); 
+
+  
+
+} 
+
+} 
