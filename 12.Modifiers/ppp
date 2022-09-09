@@ -1,0 +1,91 @@
+class Default{ 
+
+private int age=19; 
+
+protected String name="neerath"; 
+
+  
+
+void getAge() { 
+
+System.out.println("The age of the given person is "+age+"."); 
+
+} 
+
+  
+
+void getName() { 
+
+System.out.println("The name of the given person is "+name+"."); 
+
+} 
+
+} 
+
+private class Private{ 
+
+private String last_name="reddy"; 
+
+  
+
+} 
+
+protected class sfwaoif { 
+
+public String gender="Male"; 
+
+  
+
+void getGender() { 
+
+System.out.println("The gender of the given person is "+ gender+"."); 
+
+} 
+
+} 
+
+public class publicClass extends Default{ 
+
+protected double salary=600000; 
+
+protected String first_name="v"; 
+
+  
+
+void getSalary() { 
+
+System.out.println("The salary of the given person is "+ salary+"."); 
+
+} 
+
+  
+
+void getFirstName() { 
+
+System.out.println("The first name of the given person is "+ first_name+"."); 
+
+} 
+
+public static void main(String[] args) { 
+
+publicClass PC=new publicClass(); 
+
+Default D=new Default(); 
+
+D.getAge(); 
+
+D.getName(); 
+
+ 
+
+PC.getAge(); 
+
+PC.getFirstName(); 
+
+PC.getName(); 
+
+PC.getSalary(); 
+
+} 
+
+} 
