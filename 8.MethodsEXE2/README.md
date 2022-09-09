@@ -1,0 +1,1 @@
+Create a class as Student containing ID, Marks (array of 5). Now create methods for students to find the total and print the student score. Identify if the student is passed or failure with a minimum mark as 40M.  
