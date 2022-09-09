@@ -1,0 +1,89 @@
+import java.util.Scanner; 
+
+  
+
+class createThreadRunnable implements Runnable{ 
+
+    @Override 
+
+    public void run() { 
+
+        System.out.println("thread created using runnable"); 
+
+    } 
+
+} 
+
+class createThreadThread extends Thread{ 
+
+    @Override 
+
+    public void run(){ 
+
+        System.out.println("thread created by extending thread class"); 
+
+    } 
+
+} 
+
+public class problem1 { 
+
+    public static void main(String[]args) throws InterruptedException{ 
+
+        Scanner sc = new Scanner(System.in); 
+
+  
+
+        int ch; 
+
+        System.out.println("1. Create thread using Runnable\n" 
+
+        + "2. Create thread by extending Thread class\n" 
+
+        + "3. Exit"); 
+
+        do { 
+
+System.out.println("Enter choice: "); 
+
+ch=sc.nextInt(); 
+
+switch(ch) { 
+
+                case 1: 
+
+                    createThreadRunnable tr = new createThreadRunnable(); 
+
+                    Thread tr1 = new Thread(tr); 
+
+                    tr1.start(); 
+
+                    break; 
+
+                case 2: 
+
+                    createThreadThread tt = new createThreadThread(); 
+
+                    tt.start(); 
+
+                    break; 
+
+                case 3: 
+
+                    System.out.println("Exit"); 
+
+                    break; 
+
+                default: 
+
+                    System.out.println("Invalid choice!"); 
+
+} 
+
+}while(ch!=3); 
+
+        sc.close(); 
+
+    } 
+
+} 
