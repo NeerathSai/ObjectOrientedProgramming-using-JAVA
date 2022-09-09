@@ -1,0 +1,1 @@
+Write a menu driven program to do the following: -To compare two strings -To convert the uppercase character to lower and vice-versa -To display whether an entered string is a substring of the other or not -If the entered string is a substring of the other, replace it with “Hello”. 
