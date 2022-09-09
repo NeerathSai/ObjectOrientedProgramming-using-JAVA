@@ -1,0 +1,1 @@
+Create two classes as Vehicle and Car where car is single inheritance subclass of vehicle. Now create an object for the car and print the details. Note that data member and methods can be defined in both classes.
