@@ -1,0 +1,1 @@
+Return the sum of the first, middle and last elements in the array if the length of the array is odd, if the length is even then the sum of the first and last element should be displayed. [Hint: import required java.util.Array package] 
