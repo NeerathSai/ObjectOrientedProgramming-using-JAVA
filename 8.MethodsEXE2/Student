@@ -1,0 +1,167 @@
+import java.util.Scanner; 
+
+public class Student { 
+
+  
+
+String firstname, lastname; 
+
+int marks[] = new int[5]; 
+
+  
+
+  
+
+void total(int marks[]) { 
+
+double sum = 0; 
+
+for(int i = 0; i<5; i++) 
+
+sum = sum + marks[i]; 
+
+System.out.println("Total marks are: " + sum); 
+
+} 
+
+void score(int marks[]) { 
+
+double sum = 0; 
+
+for(int i = 0; i<5; i++) 
+
+sum = sum + marks[i]; 
+
+if(sum<=40) 
+
+System.out.println("Fail"); 
+
+else 
+
+System.out.println("Pass"); 
+
+} 
+
+Student(){ 
+
+Scanner sc = new Scanner(System.in); 
+
+  
+
+System.out.println("Enter the first name of the student: "); 
+
+firstname = sc.next(); 
+
+System.out.println("Enter the last name of the student: "); 
+
+lastname = sc.next(); 
+
+  
+
+try { 
+
+System.out.println("Enter the marks of the student: "); 
+
+for(int i = 0 ; i<5 ; i++) { 
+
+System.out.print("Subject " + i + ":"); 
+
+marks[i] = sc.nextInt(); 
+
+} 
+
+} catch(Exception e) { 
+
+System.out.println("Invalid");// Task 1 
+
+} 
+
+  
+
+} 
+
+  
+
+void ASCIISentence(String firstname, String lastname) 
+
+{ 
+
+String str1 = firstname + lastname; 
+
+int l = str1.length(); 
+
+int ascii = 0,convert =0; 
+
+  
+
+for (int i = 0; i < l; i++) { 
+
+convert = str1.charAt(i); 
+
+ascii = ascii+convert; 
+
+} 
+
+System.out.println("Ascii value of full name is " + ascii); 
+
+} 
+
+  
+
+static void check(String s1, String s2) { 
+
+String str1 = s1.toUpperCase(); 
+
+String str2 = s2.toUpperCase(); 
+
+if(str1.equals(str2)) 
+
+System.out.println("The last names are same"); 
+
+else 
+
+System.out.println("The last names are not the same"); 
+
+} 
+
+  
+
+public static void main(String[] args) { 
+
+Scanner sc=new Scanner(System.in); 
+
+int id; 
+
+System.out.print("Enter id: "); 
+
+id=sc.nextInt(); 
+
+  
+
+Student ob1 = new Student(); 
+
+ob1.total(ob1.marks); 
+
+ob1.score(ob1.marks); 
+
+ob1.ASCIISentence(ob1.firstname, ob1.lastname); // Task 3 
+
+Student ob2 = new Student(); 
+
+ob2.total(ob2.marks); 
+
+ob2.score(ob2.marks); 
+
+ob2.ASCIISentence(ob2.firstname, ob2.lastname); 
+
+String s1 = ob1.lastname; 
+
+String s2 = ob2.lastname; 
+
+check(s1, s2); // Task 2 
+
+} 
+
+  
+
+} 
