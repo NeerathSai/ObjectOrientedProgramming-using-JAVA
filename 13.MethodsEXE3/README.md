@@ -1,0 +1,1 @@
+Write a java program to store student record of college named “MIT”. Class Student_Detail should      contain name, id, college_name as its members.display_details() method should display the details of the students.
